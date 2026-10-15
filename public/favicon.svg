@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Subtle circular pastel background -->
+  <circle cx="24" cy="24" r="23" fill="#FFF9F3" stroke="#DCE8DC" stroke-width="1.5" />
+  
+  <!-- Flowing organic connection path -->
+  <path d="M12 28 C 16 16, 20 14, 26 22 C 30 28, 34 26, 36 18" stroke="#6F6D76" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M16 34 C 20 30, 24 32, 28 26 C 31 22, 34 16, 37 16" stroke="#DDECF4" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Soft botanical leaf/petal node -->
+  <path d="M26 14 C 23 9, 29 7, 31 11 C 32 13, 29 16, 26 14 Z" fill="#DCE8DC" stroke="#34343B" stroke-width="1.2" />
+  
+  <!-- Interconnected nodes: Resource -> Connection -> Support -->
+  <circle cx="12" cy="28" r="4.5" fill="#DDECF4" stroke="#34343B" stroke-width="2" />
+  <circle cx="26" cy="22" r="5" fill="#E7DFF3" stroke="#34343B" stroke-width="2" />
+  <circle cx="36" cy="18" r="4.5" fill="#F4DDE2" stroke="#34343B" stroke-width="2" />
+  
+  <!-- Tiny center sparkle -->
+  <circle cx="26" cy="22" r="1.8" fill="#34343B" />
+</svg>

@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-cream: #FFF9F3;
+  --color-pastel-blue: #DDECF4;
+  --color-pastel-blue-dark: #BBD7E6;
+  --color-pastel-lavender: #E7DFF3;
+  --color-pastel-lavender-dark: #C9BCE2;
+  --color-blush: #F4DDE2;
+  --color-blush-dark: #E2BDC5;
+  --color-sage: #DCE8DC;
+  --color-sage-dark: #BDD4BD;
+  --color-peach: #F6E2D2;
+  --color-peach-dark: #E6C4AA;
+  
+  --color-brand-dark: #34343B;
+  --color-brand-muted: #6F6D76;
+  --color-brand-border: #EADBCE;
+  --color-brand-card: #FFFFFF;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+/* Base resets & typography */
+html, body {
+  min-height: 100%;
+  background-color: #FFF9F3;
+  color: #34343B;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================
+   PREMIUM PASTEL GLASSMORPHISM SYSTEM
+   ========================================================== */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.58);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 10px 35px rgba(52, 52, 59, 0.05), 0 1px 3px rgba(52, 52, 59, 0.02);
+  border-radius: 24px;
+}
+
+.glass-card-opaque {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 30px rgba(52, 52, 59, 0.05);
+  border-radius: 24px;
+}
+
+.glass-card-hover {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(52, 52, 59, 0.09);
+  border-color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+/* Pastel Glass Card Tints */
+.glass-tint-blue {
+  background: rgba(221, 236, 244, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+.glass-tint-lavender {
+  background: rgba(231, 223, 243, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+.glass-tint-blush {
+  background: rgba(244, 221, 226, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+.glass-tint-sage {
+  background: rgba(220, 232, 220, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+.glass-tint-peach {
+  background: rgba(246, 226, 210, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+/* Glass Navbar */
+.glass-nav {
+  background: rgba(255, 249, 243, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(234, 219, 206, 0.65);
+}
+
+/* Ambient Background Atmosphere Blobs */
+.ambient-blob-lavender {
+  background: radial-gradient(circle, rgba(231, 223, 243, 0.65) 0%, rgba(231, 223, 243, 0) 70%);
+}
+.ambient-blob-blue {
+  background: radial-gradient(circle, rgba(221, 236, 244, 0.65) 0%, rgba(221, 236, 244, 0) 70%);
+}
+.ambient-blob-blush {
+  background: radial-gradient(circle, rgba(244, 221, 226, 0.5) 0%, rgba(244, 221, 226, 0) 70%);
+}
+.ambient-blob-sage {
+  background: radial-gradient(circle, rgba(220, 232, 220, 0.5) 0%, rgba(220, 232, 220, 0) 70%);
+}
+
+/* ==========================================================
+   ACCESSIBILITY & EASY READ MODES
+   ========================================================== */
+
+/* Text Scaling */
+html.text-scale-lg {
+  font-size: 112.5%; /* 18px */
+}
+html.text-scale-xl {
+  font-size: 125%; /* 20px */
+}
+
+/* High Contrast Mode */
+html.high-contrast {
+  --color-warm-cream: #FFFFFF;
+  --color-brand-dark: #000000;
+  --color-brand-muted: #1A1A1A;
+  --color-brand-border: #000000;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+html.high-contrast .glass-card,
+html.high-contrast .glass-nav,
+html.high-contrast .glass-card-opaque {
+  background: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* Reduced Motion Mode */
+html.reduced-motion *,
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Easy Read / Simplified Mode Enhancements */
+html.easy-read-mode {
+  line-height: 1.75;
+}
+html.easy-read-mode p,
+html.easy-read-mode span {
+  font-weight: 500;
+}
+
+/* Custom Soft Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #EADBCE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9BCE2;
+}
+
+/* Leaflet Map Customization for Pastel Aesthetics */
+.leaflet-container {
+  font-family: var(--font-sans) !important;
+  border-radius: 1.5rem;
+  z-index: 10;
+}
+
+.custom-pastel-pin {
+  background: transparent;
+  border: none;
+}
